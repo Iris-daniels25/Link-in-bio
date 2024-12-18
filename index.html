@@ -13,6 +13,23 @@
       * {
         border: 1px red dashed;
       }
+      body {
+        padding: 40px 0px;
+      }
+      .avatar-image {
+        width: 128px;
+        height: 128px;
+        object-fit: cover;
+        border-radius: 128px;
+        border: solid, pink, 2px;
+      }
+      .thumbnail{
+        width: 48px;
+        height: 48px;
+        border-radius: 48px;
+        object-fit: cover;
+        border: solid, pink, 2px;
+      }
     </style>
     
 
@@ -23,7 +40,7 @@
     <div class="main-container">
 main container
       <div class="image-row"> 
-        <img src="images/imd_headshot.jpeg" alt="Iris Daniels headshot">
+        <img class="avatar-image" src="images/imd_headshot.jpeg" alt="Iris Daniels headshot">
       </div>
 
       <div class="name-row">
@@ -32,18 +49,29 @@ main container
 
       <div class="social-icons-row">
       <a href="https://github.com/Iris-daniels25" target="_blank">
-        <img src="images/github_icon.png" alt="Github Icon" width="50" height="50">
+        <img class="thumbnail" src="images/github_icon.png" alt="Github Icon" width="50" height="50">
       </a>
       <a href="https://www.linkedin.com/in/iris-daniels-m/" target="_blank">
-        <img src="images/linkedin_icon.jpg" alt="LinkedIn Icon" width="50" height="50">
+        <img class="thumbnail" src="images/linkedin_icon.jpg" alt="LinkedIn Icon" width="50" height="50">
       </a>
       <a href="mailto:irisdaniels7@student.ccc.edu" target="_blank">
-        <img src="images/outlook_icon.png" alt="Outlook Icon" width="50" height="50">
+        <img class="thumbnail" src="images/outlook_icon.png" alt="Outlook Icon" width="50" height="50">
       </a>
       </div>
 
       <div class="links-row">
-        links row
+        <div class="item">
+          <a href="https://dev.to/irisdaniels25" class="link" target="_blank">
+          <img class="thumbnail" src="images/devto-icon.png" class="icon" alt="Dev.to Blog"> My Dev.to Blog
+          </a>
+        </div>
+
+        <div class="item">
+        <a href="https://www.amazon.com/hz/wishlist/ls/3OJ2VP24Q8FLL?ref_=wl_share" class="link" target="_blank">
+          <img class="thumbnail" src="images/amazon_icon.png" class="icon" alt="Amazon Wishlist"> My Amazon Tech Gadgets Wishlist
+        </a>
+      </div>
+        
       </div>
 
     </div>
