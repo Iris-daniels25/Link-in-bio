@@ -9,12 +9,53 @@
 
     <meta charset="UTF-8">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     <style>
+      /*
       * {
         border: 1px red dashed;
       }
+        */
+      html {
+        min-height: 100%;
+      }
       body {
+        min-height: 100%;
         padding: 40px 0px;
+        background: linear-gradient(135deg, #ffe5ce, #ffd0ba, #ffb9b0, #ffa2b0, #fd8dba, #ec7cca, #cd72de, #9c71f2); /* made at https://learnui.design/tools/gradient-generator.html */
+        color: #374151;
+        font-family: "Impact";
+
+      }
+      .main-container {
+        width: 640px;
+        margin: auto;
+        max-width: auto;
+      }
+
+      a {
+        color: #374151;
+        text-decoration: none;
+      }
+      .image-row {
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .name-row {
+          margin-bottom: 30px;
+          text-align: center;
+          font-family: "georgia";
+          font-size: 24px;
+          font-weight: 900;
+      }
+
+      .social-icons-row {
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-around;
       }
       .avatar-image {
         width: 128px;
@@ -30,6 +71,20 @@
         object-fit: cover;
         border: solid, pink, 2px;
       }
+      .item {
+        background-color: rgba(149, 123, 173, 0.5);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        border-radius: 1000px;
+        padding: 5px;
+        padding-right: 53px;
+        box-shadow: 4px 4px 10px 0px rgba(122,32,122,0.5);
+      }
+      .link-text {
+        text-align: center;
+        flex-grow: 1;
+      }
     </style>
     
 
@@ -38,7 +93,7 @@
   <body>
 
     <div class="main-container">
-main container
+
       <div class="image-row"> 
         <img class="avatar-image" src="images/imd_headshot.jpeg" alt="Iris Daniels headshot">
       </div>
@@ -61,14 +116,17 @@ main container
 
       <div class="links-row">
         <div class="item">
-          <a href="https://dev.to/irisdaniels25" class="link" target="_blank">
-          <img class="thumbnail" src="images/devto-icon.png" class="icon" alt="Dev.to Blog"> My Dev.to Blog
+          <img class="thumbnail" src="images/devto-icon.png" class="icon" alt="Dev.to Blog">
+          <a class="link-text" target="_blank" href="https://dev.to/irisdaniels25" class="link" target="_blank">
+           My Dev.to Blog
           </a>
         </div>
 
         <div class="item">
-        <a href="https://www.amazon.com/hz/wishlist/ls/3OJ2VP24Q8FLL?ref_=wl_share" class="link" target="_blank">
-          <img class="thumbnail" src="images/amazon_icon.png" class="icon" alt="Amazon Wishlist"> My Amazon Tech Gadgets Wishlist
+          <img class="thumbnail" src="images/amazon_icon.png" class="icon" alt="Amazon Wishlist">
+          <a 
+        class="link-text" target="_blank" href="https://www.amazon.com/hz/wishlist/ls/3OJ2VP24Q8FLL?ref_=wl_share" class="link" target="_blank">
+           My Amazon Tech Gadgets Wishlist
         </a>
       </div>
         
