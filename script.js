@@ -44,33 +44,39 @@ function typeEffect() {
 }
 typeEffect();
 
-const apiKey = 'e6ce5f21d3e82bf801b1a31a40a9b75e'; // Your OpenWeatherMap API key
-const city = 'Chicago'; // Replace with your city or make it dynamic if needed
+// WeatherStack API for Current Weather
+const apiKey = 'da5c866bd688c2d3588240d143c04512'; // Your WeatherStack API key
+const city = 'Chicago'; // City to fetch weather for
 const weatherWidget = document.getElementById('weather-widget');
 const weatherText = document.getElementById('weather-text');
 
-// Fetch weather data from OpenWeatherMap API
+// Fetch current weather data from WeatherStack API
 async function fetchWeather() {
   try {
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`);
+    const response = await fetch(`https://api.weatherstack.com/current?access_key=${apiKey}&query=${city}&units=f`);
     const data = await response.json();
+    console.log("API Response:", data); // Debug log to verify response
 
-    if (data.cod === 200) {
-      const temp = data.main.temp;
-      const description = data.weather[0].description;
-      const icon = data.weather[0].icon;
+    if (data.success !== false) {
+      const temp = data.current.temperature; // Temperature in Fahrenheit
+      const description = data.current.weather_descriptions[0]; // Weather description
+      const icon = data.current.weather_icons[0]; // Weather icon URL
 
-      // Update weather widget
+      // Update the weather widget
       weatherText.innerHTML = `
-        <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${description}" />
-        ${city}: ${temp}°C, ${description.charAt(0).toUpperCase() + description.slice(1)}
+        <div style="text-align: center;">
+          <img src="${icon}" alt="${description}" style="width: 30px; vertical-align: middle;">
+          <div>${city}: ${temp}°F</div>
+          <div>${description}</div>
+        </div>
       `;
     } else {
       weatherText.textContent = 'Unable to fetch weather data.';
+      console.error("Error Response:", data.error.info);
     }
   } catch (error) {
     weatherText.textContent = 'Error fetching weather data.';
-    console.error(error);
+    console.error("Fetch Error:", error);
   }
 }
 
