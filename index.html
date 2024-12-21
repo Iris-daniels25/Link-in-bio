@@ -13,6 +13,12 @@
 </head>
 <body>
   <div class="main-container">
+
+      <!-- Weather Widget -->
+      <div id="weather-widget">
+        <p id="weather-text">Loading weather...</p>
+      </div>
+    
     <!-- Dark Mode Toggle Switch -->
     <div class="toggle-container">
       <button id="theme-toggle" aria-label="Toggle Dark Mode">
@@ -57,6 +63,20 @@
         <img class="thumbnail" src="images/outlook_icon.png" alt="Outlook Icon">
         <button class="link-text" id="show-form-button" aria-label="Open Contact Form">Let's Connect!</button>
       </div>
+    </div>
+
+    <!-- Spotify Widget -->
+    <div class="widget">
+      <h3>My Favorite Playlist</h3>
+      <iframe style="border-radius:12px" 
+              src="https://open.spotify.com/embed/playlist/2r7moMsbEo53Owz2qxeojj?utm_source=generator&theme=0" 
+              width="100%" 
+              height="352" 
+              frameBorder="0" 
+              allowfullscreen="" 
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+              loading="lazy">
+      </iframe>
     </div>
 
     <!-- Contact Form -->

@@ -89,6 +89,25 @@ input:checked + .slider:before {
   color: #333;
 }
 
+/* Weather Widget */
+#weather-widget {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  color: #FFFFFF;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#weather-widget p {
+  margin: 0;
+  font-weight: 600;
+}
+
+
 /* Header */
 header {
   padding: 20px;
@@ -125,6 +144,13 @@ header {
   background-color: #6B38FF;
   color: #FFFFFF;
 }
+
+.item:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
 
 .thumbnail {
   width: 48px;
