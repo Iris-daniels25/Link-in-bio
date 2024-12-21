@@ -1,138 +1,87 @@
 <!DOCTYPE html>
-<html>
-  <Head>
-    <title>
-     Iris' Link-in-bio
-    </title>
-    <!-- The bellow meta tag content should be changed to an image I want to show when the app is shared-->
-    <meta property="og:image" content="images/imd_headshot.jpeg">
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <style>
-      /*
-      * {
-        border: 1px red dashed;
-      }
-        */
-      html {
-        min-height: 100%;
-      }
-      body {
-        min-height: 100%;
-        padding: 40px 0px;
-        background: linear-gradient(135deg, #ffe5ce, #ffd0ba, #ffb9b0, #ffa2b0, #fd8dba, #ec7cca, #cd72de, #9c71f2); /* made at https://learnui.design/tools/gradient-generator.html */
-        color: #374151;
-        font-family: "Impact";
-
-      }
-      .main-container {
-        width: 640px;
-        margin: auto;
-        max-width: auto;
-      }
-
-      a {
-        color: #374151;
-        text-decoration: none;
-      }
-      .image-row {
-        margin-bottom: 30px;
-        text-align: center;
-      }
-
-      .name-row {
-          margin-bottom: 30px;
-          text-align: center;
-          font-family: "georgia";
-          font-size: 24px;
-          font-weight: 900;
-      }
-
-      .social-icons-row {
-        margin-bottom: 30px;
-        display: flex;
-        justify-content: space-around;
-      }
-      .avatar-image {
-        width: 128px;
-        height: 128px;
-        object-fit: cover;
-        border-radius: 128px;
-        border: solid, pink, 2px;
-      }
-      .thumbnail{
-        width: 48px;
-        height: 48px;
-        border-radius: 48px;
-        object-fit: cover;
-        border: solid, pink, 2px;
-      }
-      .item {
-        background-color: rgba(149, 123, 173, 0.5);
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        border-radius: 1000px;
-        padding: 5px;
-        padding-right: 53px;
-        box-shadow: 4px 4px 10px 0px rgba(122,32,122,0.5);
-      }
-      .link-text {
-        text-align: center;
-        flex-grow: 1;
-      }
-    </style>
-    
-
-
-  </Head>
-  <body>
-
-    <div class="main-container">
-
-      <div class="image-row"> 
-        <img class="avatar-image" src="images/imd_headshot.jpeg" alt="Iris Daniels headshot">
-      </div>
-
-      <div class="name-row">
-        Iris Daniels
-      </div>
-
-      <div class="social-icons-row">
-      <a href="https://github.com/Iris-daniels25" target="_blank">
-        <img class="thumbnail" src="images/github_icon.png" alt="Github Icon" width="50" height="50">
-      </a>
-      <a href="https://www.linkedin.com/in/iris-daniels-m/" target="_blank">
-        <img class="thumbnail" src="images/linkedin_icon.jpg" alt="LinkedIn Icon" width="50" height="50">
-      </a>
-      <a href="mailto:irisdaniels7@student.ccc.edu" target="_blank">
-        <img class="thumbnail" src="images/outlook_icon.png" alt="Outlook Icon" width="50" height="50">
-      </a>
-      </div>
-
-      <div class="links-row">
-        <div class="item">
-          <img class="thumbnail" src="images/devto-icon.png" class="icon" alt="Dev.to Blog">
-          <a class="link-text" target="_blank" href="https://dev.to/irisdaniels25" class="link" target="_blank">
-           My Dev.to Blog
-          </a>
-        </div>
-
-        <div class="item">
-          <img class="thumbnail" src="images/amazon_icon.png" class="icon" alt="Amazon Wishlist">
-          <a 
-        class="link-text" target="_blank" href="https://www.amazon.com/hz/wishlist/ls/3OJ2VP24Q8FLL?ref_=wl_share" class="link" target="_blank">
-           My Amazon Tech Gadgets Wishlist
-        </a>
-      </div>
-        
-      </div>
-
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iris' Link-in-Bio</title>
+  <!-- Open Graph Image -->
+  <meta property="og:image" content="images/imd_headshot.jpeg">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/6bd3020cb3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="main-container">
+    <!-- Dark Mode Toggle Switch -->
+    <div class="toggle-container">
+      <button id="theme-toggle" aria-label="Toggle Dark Mode">
+        <i class="fa-solid fa-toggle-on"></i>
+      </button>
     </div>
 
-  </body>
+    <!-- Header Section -->
+    <header>
+      <div class="image-row">
+        <img class="avatar-image" src="images/imd_headshot.jpeg" alt="Iris Daniels headshot">
+      </div>
+      <div class="name-row">Hi, I'm Iris Daniels!</div>
+      <p class="bio">
+        <span id="dynamic-text" class="typewriter"></span> <!-- Typewriter effect element -->
+      </p>
+    </header>
+
+    <!-- Links Section -->
+    <div class="links-row">
+      <div class="item">
+        <img class="thumbnail" src="images/devto-icon.png" alt="Dev.to Blog">
+        <a class="link-text" href="https://dev.to/irisdaniels25" target="_blank">My Dev.to Blog</a>
+      </div>
+
+      <div class="item">
+        <img class="thumbnail" src="images/amazon_icon.png" alt="Amazon Wishlist">
+        <a class="link-text" href="https://www.amazon.com/hz/wishlist/ls/3OJ2VP24Q8FLL?ref_=wl_share" target="_blank">My Amazon Tech Gadgets Wishlist</a>
+      </div>
+
+      <div class="item">
+        <img class="thumbnail" src="images/github_icon.png" alt="GitHub">
+        <a class="link-text" href="https://github.com/Iris-daniels25" target="_blank">GitHub</a>
+      </div>
+
+      <div class="item">
+        <img class="thumbnail" src="images/linkedin_icon.jpg" alt="LinkedIn">
+        <a class="link-text" href="https://www.linkedin.com/in/iris-daniels-m/" target="_blank">LinkedIn</a>
+      </div>
+
+      <div class="item">
+        <img class="thumbnail" src="images/outlook_icon.png" alt="Outlook Icon">
+        <button class="link-text" id="show-form-button" aria-label="Open Contact Form">Let's Connect!</button>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div id="contact-form" class="hidden">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/meoojaej" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit" class="fade-in">Send</button>
+      </form>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 Iris Daniels. Built with ❤️ and code.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
