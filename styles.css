@@ -1,65 +1,81 @@
-/* General Body Styles */
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  height: 100vh; /* makes body fill full viewport height */
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* dark overlay */
-    url('images/AdobeStock_286969283.jpeg'); /* your image path */
-  background-size: cover; /* scales image to fill the viewport */
-  background-position: center; /* centers the image */
-  background-repeat: no-repeat; /* prevents tiling */
-  background-attachment: fixed; /* makes it stay still when scrolling */
-  color: #FFFFFF;
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('images/AdobeStock_286969283.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
   text-align: center;
   transition: background 0.5s ease, color 0.5s ease;
 }
 
-
-body.dark-mode {
-  background: #121212;
-  color: #ffffff;
-}
-
-body.dark-mode .main-container {
-  background: #1e1e1e;
-}
-
-/* Main Container */
 .main-container {
   width: 90%;
   max-width: 640px;
   margin: auto;
-  background: #000000;
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 15px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  color: #FFFFFF;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   padding: 20px;
+  backdrop-filter: blur(6px);
 }
 
-/* Toggle Container Styling */
+/* ===== HEADER ===== */
+header {
+  background: rgba(0, 0, 0, 0.7);
+  border: 3px solid #6B38FF;
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 20px rgba(107, 56, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(107, 56, 255, 0.5);
+}
+
+.name-row {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #FF5EAD;
+  margin-top: 10px;
+}
+
+header p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 10px;
+  color: #f0f0f0;
+}
+
+/* ===== TOGGLE & WEATHER ===== */
 .toggle-container {
   display: flex;
-  justify-content: space-between; /* Space out weather widget and toggle button */
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
   padding: 10px;
-  background: #1e1e1e;
+  background: rgba(30, 30, 30, 0.7);
   border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Weather Widget */
 #weather-widget {
   display: flex;
   align-items: center;
-  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
   padding: 5px 10px;
   border-radius: 8px;
   font-size: 14px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 #weather-widget img {
@@ -68,18 +84,11 @@ body.dark-mode .main-container {
   margin-right: 8px;
 }
 
-#weather-widget p {
-  margin: 0;
-  font-weight: 600;
-}
-
-/* Dark Mode Toggle Button */
 #theme-toggle {
   background: none;
   border: none;
-  color: #FFFFFF;
+  color: #fff;
   cursor: pointer;
-  font-size: 16px;
 }
 
 #theme-toggle i {
@@ -92,19 +101,7 @@ body.dark-mode .main-container {
   color: #FF5EAD;
 }
 
-/* Header */
-header {
-  padding: 20px;
-}
-
-/* Bio Section */
-.bio {
-  margin: 10px auto;
-  font-size: 1.1rem;
-  max-width: 600px;
-}
-
-/* Profile Image */
+/* ===== PROFILE IMAGE ===== */
 .avatar-image {
   width: 128px;
   height: 128px;
@@ -114,7 +111,7 @@ header {
   margin-bottom: 15px;
 }
 
-/* Links Section */
+/* ===== LINKS ===== */
 .links-row {
   padding: 20px;
 }
@@ -126,13 +123,13 @@ header {
   margin-bottom: 15px;
   border-radius: 10px;
   background-color: #6B38FF;
-  color: #FFFFFF;
+  color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .item:hover {
   transform: scale(1.05);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .thumbnail {
@@ -143,33 +140,30 @@ header {
   margin-right: 15px;
 }
 
-/* Link Text Styling */
 .link-text {
   flex-grow: 1;
   font-size: 1.2rem;
-  background: none; /* Removes background */
-  border: none; /* Removes border */
-  color: #FFFFFF; /* Ensures consistent text color */
+  color: #fff;
   text-decoration: none;
   font-weight: 600;
+  background: none;
+  border: none;
   cursor: pointer;
-  padding: 0; /* Removes any padding that may cause visual artifacts */
 }
 
 .link-text:hover {
-  color: #FF5EAD; /* Changes text color on hover */
-  text-decoration: underline; /* Adds underline for hover effect */
-  background: none; /* Ensures no background on hover */
+  color: #FF5EAD;
+  text-decoration: underline;
 }
 
-/* Contact Form */
+/* ===== CONTACT FORM ===== */
 #contact-form {
   margin-top: 20px;
   padding: 20px;
   background-color: #6B38FF;
   border-radius: 10px;
-  color: #FFFFFF;
-  display: none; /* Start hidden */
+  color: #fff;
+  display: none;
 }
 
 form {
@@ -187,23 +181,31 @@ input, textarea {
 button {
   padding: 10px 20px;
   background-color: #FF5EAD;
-  color: #FFFFFF;
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #FFFFFF;
+  background-color: #fff;
   color: #6B38FF;
 }
 
-/* Hidden Class */
-.hidden {
-  display: none;
+/* ===== SPOTIFY WIDGET ===== */
+.widget iframe {
+  border-radius: 12px;
+  margin-top: 20px;
 }
 
-/* Fade-In Animation */
+/* ===== FOOTER ===== */
+footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* ===== FADE-IN ANIMATION ===== */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
