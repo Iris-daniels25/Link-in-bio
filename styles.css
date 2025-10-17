@@ -3,11 +3,19 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #000000, #6B38FF);
+  height: 100vh; /* makes body fill full viewport height */
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* dark overlay */
+    url('images/AdobeStock_286969283.jpeg'); /* your image path */
+  background-size: cover; /* scales image to fill the viewport */
+  background-position: center; /* centers the image */
+  background-repeat: no-repeat; /* prevents tiling */
+  background-attachment: fixed; /* makes it stay still when scrolling */
   color: #FFFFFF;
   text-align: center;
-  transition: background 0.5s ease, color 0.5s ease; /* Smooth transition for dark mode */
+  transition: background 0.5s ease, color 0.5s ease;
 }
+
 
 body.dark-mode {
   background: #121212;
