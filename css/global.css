@@ -1708,3 +1708,73 @@ body.page-entered main {
     opacity: 1;
   }
 }
+/* =========================================================
+   MOBILE BACKGROUND AND CONTRAST FIX
+========================================================= */
+
+@media (max-width: 760px) {
+  body {
+    background:
+      linear-gradient(
+        160deg,
+        #0d1424,
+        #080d18
+      ) !important;
+
+    color: #f8fafc !important;
+  }
+
+  /* Remove the bright city image on mobile */
+  body::before {
+    display: none !important;
+    content: none !important;
+  }
+
+  /* Prevent decorative lighting from washing out the page */
+  .background-decoration {
+    display: none !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  strong {
+    color: #f8fafc !important;
+    opacity: 1 !important;
+  }
+
+  p,
+  li,
+  .hero-description,
+  .hero-intro,
+  .section-heading p,
+  .glass-card p {
+    color: #dce5ee !important;
+    opacity: 1 !important;
+  }
+
+  .eyebrow {
+    color: #b8ddf3 !important;
+    opacity: 1 !important;
+  }
+
+  .glass-card {
+    background:
+      linear-gradient(
+        145deg,
+        rgba(30, 42, 62, 0.97),
+        rgba(15, 24, 39, 0.97)
+      ) !important;
+
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .secondary-button,
+  .outline-button {
+    background: rgba(15, 24, 39, 0.92) !important;
+    color: #d7edfa !important;
+    border-color: rgba(190, 219, 239, 0.5) !important;
+  }
+}
