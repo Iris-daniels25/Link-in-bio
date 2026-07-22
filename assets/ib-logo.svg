@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 520 220"
+     role="img"
+     aria-labelledby="title desc">
+  <title id="title">IRIS BUILDS logo</title>
+  <desc id="desc">Minimal geometric IB monogram with a cool blue-to-lavender gradient and IRIS BUILDS wordmark.</desc>
+
+  <defs>
+    <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D7EDFA"/>
+      <stop offset="52%" stop-color="#A9D5EF"/>
+      <stop offset="100%" stop-color="#C9BCF5"/>
+    </linearGradient>
+  </defs>
+
+  <g fill="none"
+     stroke="url(#brandGradient)"
+     stroke-width="12"
+     stroke-linecap="square"
+     stroke-linejoin="round">
+    <path d="M64 34 V154"/>
+    <path d="M96 34 V194"/>
+    <path d="M96 34 H145
+             C177 34 196 50 196 76
+             C196 101 177 112 145 112
+             H118"/>
+    <path d="M96 112 H150
+             C184 112 204 126 204 153
+             C204 181 184 194 150 194
+             H96"/>
+  </g>
+
+  <line x1="232" y1="48" x2="232" y2="166"
+        stroke="#A9D5EF"
+        stroke-opacity="0.45"
+        stroke-width="1.5"/>
+
+  <text x="255"
+        y="93"
+        fill="url(#brandGradient)"
+        font-family="Inter, Arial, Helvetica, sans-serif"
+        font-size="34"
+        font-weight="600"
+        letter-spacing="9">IRIS</text>
+
+  <text x="255"
+        y="137"
+        fill="url(#brandGradient)"
+        font-family="Inter, Arial, Helvetica, sans-serif"
+        font-size="34"
+        font-weight="600"
+        letter-spacing="7">BUILDS</text>
+</svg>

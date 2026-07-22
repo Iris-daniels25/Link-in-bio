@@ -1,0 +1,736 @@
+/* =========================================================
+   IRIS BUILDS — ABOUT PAGE
+   Loaded after global.css
+========================================================= */
+
+
+/* =========================================================
+   ABOUT HERO
+========================================================= */
+
+.about-hero {
+  padding-top: 84px;
+  padding-bottom: 96px;
+}
+
+.about-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+  align-items: center;
+  gap: 72px;
+}
+
+.about-hero-content {
+  max-width: 760px;
+}
+
+.about-hero-content h1 {
+  max-width: 820px;
+}
+
+.about-hero-intro {
+  max-width: 720px;
+
+  color: var(--color-accent-light);
+
+  font-size: clamp(1.12rem, 2vw, 1.4rem);
+  font-weight: 600;
+  line-height: 1.65;
+}
+
+.about-hero-content > p:not(.eyebrow):not(.about-hero-intro) {
+  max-width: 720px;
+}
+
+.about-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+
+  margin-top: 30px;
+}
+
+
+/* =========================================================
+   ABOUT PROFILE CARD
+========================================================= */
+
+.about-profile-column {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-profile-card {
+  position: relative;
+
+  width: min(100%, 390px);
+  padding: 18px;
+
+  overflow: hidden;
+}
+
+.about-profile-card::before {
+  content: "";
+
+  position: absolute;
+  top: -90px;
+  right: -90px;
+
+  width: 240px;
+  height: 240px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(201, 188, 245, 0.18),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+.about-image-wrapper {
+  position: relative;
+  z-index: 1;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(210, 232, 245, 0.2);
+  border-radius: 21px;
+
+  aspect-ratio: 4 / 5;
+}
+
+.about-profile-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center top;
+
+  transition:
+    transform var(--transition-slow),
+    filter var(--transition-slow);
+}
+
+.about-profile-card:hover .about-profile-image {
+  transform: scale(1.035);
+  filter: brightness(1.04);
+}
+
+.about-profile-details {
+  position: relative;
+  z-index: 1;
+
+  padding: 22px 4px 4px;
+}
+
+.about-profile-details h2 {
+  margin-bottom: 6px;
+
+  font-size: 1.7rem;
+}
+
+.about-profile-details > p {
+  margin-bottom: 20px;
+
+  color: var(--color-accent-light);
+
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.profile-details-list {
+  display: grid;
+  gap: 12px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.profile-details-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  color: var(--color-text-soft);
+
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.profile-details-list i {
+  width: 18px;
+  margin-top: 4px;
+
+  color: var(--color-accent);
+  text-align: center;
+}
+
+
+/* =========================================================
+   STORY SECTION
+========================================================= */
+
+.story-section {
+  padding-top: 84px;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.story-card {
+  min-height: 100%;
+  padding: 28px;
+}
+
+.story-card .card-icon {
+  margin-bottom: 22px;
+}
+
+.story-card h3 {
+  margin-bottom: 14px;
+}
+
+.story-card p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   JOURNEY TIMELINE
+========================================================= */
+
+.journey-section {
+  padding-top: 86px;
+}
+
+.journey-timeline {
+  position: relative;
+
+  display: grid;
+  gap: 22px;
+
+  max-width: 930px;
+}
+
+.journey-timeline::before {
+  content: "";
+
+  position: absolute;
+  top: 38px;
+  bottom: 38px;
+  left: 31px;
+
+  width: 1px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(169, 213, 239, 0.12),
+      rgba(169, 213, 239, 0.62),
+      rgba(201, 188, 245, 0.22)
+    );
+}
+
+.timeline-item {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 22px;
+
+  padding: 24px 28px 24px 20px;
+}
+
+.timeline-marker {
+  position: relative;
+  z-index: 1;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+  margin: 2px auto 0;
+
+  border: 1px solid rgba(169, 213, 239, 0.3);
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(169, 213, 239, 0.2),
+      rgba(201, 188, 245, 0.12)
+    );
+
+  color: var(--color-accent-light);
+
+  box-shadow:
+    0 0 0 7px rgba(12, 20, 34, 0.82);
+}
+
+.timeline-content {
+  min-width: 0;
+}
+
+.timeline-label {
+  margin-bottom: 5px;
+
+  color: var(--color-accent);
+
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.timeline-content h3 {
+  margin-bottom: 10px;
+}
+
+.timeline-content p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   INTERESTS
+========================================================= */
+
+.interests-section {
+  padding-top: 88px;
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.interest-card {
+  min-height: 100%;
+  padding: 26px;
+}
+
+.interest-card .card-icon {
+  margin-bottom: 20px;
+}
+
+.interest-card h3 {
+  margin-bottom: 12px;
+}
+
+.interest-card p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   WORKING STYLE
+========================================================= */
+
+.working-style-section {
+  padding-top: 82px;
+}
+
+.working-style-panel {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 52px;
+
+  padding: clamp(28px, 5vw, 52px);
+
+  overflow: hidden;
+}
+
+.working-style-panel::before {
+  content: "";
+
+  position: absolute;
+  left: -120px;
+  bottom: -150px;
+
+  width: 340px;
+  height: 340px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(147, 213, 190, 0.14),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+.working-style-intro,
+.working-style-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.working-style-intro h2 {
+  margin-bottom: 16px;
+}
+
+.working-style-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.working-style-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.working-style-item {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 18px;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid rgba(190, 219, 239, 0.1);
+}
+
+.working-style-item:first-child {
+  padding-top: 0;
+}
+
+.working-style-item:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.working-style-number {
+  color: var(--color-accent);
+
+  font-size: 0.84rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.working-style-item h3 {
+  margin-bottom: 7px;
+
+  font-size: 1.1rem;
+}
+
+.working-style-item p {
+  margin-bottom: 0;
+
+  font-size: 0.92rem;
+}
+
+
+/* =========================================================
+   ABOUT CTA
+========================================================= */
+
+.cta-section {
+  padding-top: 78px;
+  padding-bottom: 108px;
+}
+
+.cta-card {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.cta-card::before {
+  content: "";
+
+  position: absolute;
+  right: -130px;
+  top: -150px;
+
+  width: 340px;
+  height: 340px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(169, 213, 239, 0.16),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+.cta-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =========================================================
+   ENTRANCE ANIMATIONS
+========================================================= */
+
+.about-hero-content,
+.about-profile-column,
+.story-section .section-heading,
+.story-card,
+.journey-section .section-heading,
+.timeline-item,
+.interests-section .section-heading,
+.interest-card,
+.working-style-panel,
+.cta-card {
+  animation: about-fade-up 720ms ease both;
+}
+
+.about-profile-column {
+  animation-delay: 100ms;
+}
+
+.story-card:nth-child(1) {
+  animation-delay: 80ms;
+}
+
+.story-card:nth-child(2) {
+  animation-delay: 150ms;
+}
+
+.story-card:nth-child(3) {
+  animation-delay: 220ms;
+}
+
+.timeline-item:nth-child(1) {
+  animation-delay: 80ms;
+}
+
+.timeline-item:nth-child(2) {
+  animation-delay: 140ms;
+}
+
+.timeline-item:nth-child(3) {
+  animation-delay: 200ms;
+}
+
+.timeline-item:nth-child(4) {
+  animation-delay: 260ms;
+}
+
+.timeline-item:nth-child(5) {
+  animation-delay: 320ms;
+}
+
+.interest-card:nth-child(1) {
+  animation-delay: 70ms;
+}
+
+.interest-card:nth-child(2) {
+  animation-delay: 120ms;
+}
+
+.interest-card:nth-child(3) {
+  animation-delay: 170ms;
+}
+
+.interest-card:nth-child(4) {
+  animation-delay: 220ms;
+}
+
+.interest-card:nth-child(5) {
+  animation-delay: 270ms;
+}
+
+.interest-card:nth-child(6) {
+  animation-delay: 320ms;
+}
+
+@keyframes about-fade-up {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   MEDIUM SCREENS
+========================================================= */
+
+@media (max-width: 1050px) {
+  .about-hero-layout {
+    grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+    gap: 48px;
+  }
+
+  .story-grid,
+  .interests-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .story-card:last-child {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 12px);
+    justify-self: center;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 820px) {
+  .about-hero {
+    padding-top: 66px;
+  }
+
+  .about-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 46px;
+  }
+
+  .about-hero-content,
+  .about-hero-content h1,
+  .about-hero-intro,
+  .about-hero-content > p {
+    max-width: none;
+  }
+
+  .about-profile-column {
+    justify-content: flex-start;
+  }
+
+  .about-profile-card {
+    width: min(100%, 440px);
+  }
+
+  .working-style-panel {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+  .about-hero {
+    padding-top: 54px;
+    padding-bottom: 64px;
+  }
+
+  .about-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .story-grid,
+  .interests-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story-card:last-child {
+    grid-column: auto;
+    max-width: none;
+  }
+
+  .story-card,
+  .interest-card {
+    padding: 22px;
+  }
+
+  .journey-timeline::before {
+    left: 24px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 14px;
+
+    padding: 22px 20px 22px 14px;
+  }
+
+  .timeline-marker {
+    width: 38px;
+    height: 38px;
+
+    font-size: 0.9rem;
+
+    box-shadow:
+      0 0 0 5px rgba(12, 20, 34, 0.82);
+  }
+
+  .working-style-panel {
+    padding: 24px;
+  }
+
+  .working-style-item {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .about-profile-card {
+    padding: 14px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+  .about-hero-intro {
+    font-size: 1.04rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.08rem;
+  }
+
+  .profile-details-list li {
+    font-size: 0.84rem;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-hero-content,
+  .about-profile-column,
+  .story-section .section-heading,
+  .story-card,
+  .journey-section .section-heading,
+  .timeline-item,
+  .interests-section .section-heading,
+  .interest-card,
+  .working-style-panel,
+  .cta-card {
+    animation: none;
+  }
+
+  .about-profile-card:hover .about-profile-image {
+    transform: none;
+  }
+}

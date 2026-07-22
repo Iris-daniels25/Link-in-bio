@@ -1,0 +1,850 @@
+/* =========================================================
+   IRIS BUILDS — RESUME PAGE
+   Loaded after global.css
+========================================================= */
+
+
+/* =========================================================
+   RESUME HERO
+========================================================= */
+
+.resume-hero {
+  padding-top: 84px;
+  padding-bottom: 92px;
+}
+
+.resume-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+  align-items: center;
+  gap: 72px;
+}
+
+.resume-hero-content {
+  max-width: 780px;
+}
+
+.resume-hero-content h1 {
+  max-width: 850px;
+}
+
+.resume-hero-intro {
+  max-width: 720px;
+
+  color: var(--color-accent-light);
+
+  font-size: clamp(1.12rem, 2vw, 1.4rem);
+  font-weight: 600;
+  line-height: 1.65;
+}
+
+.resume-hero-content > p:not(.eyebrow):not(.resume-hero-intro) {
+  max-width: 720px;
+}
+
+.resume-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+
+  margin-top: 30px;
+}
+
+
+/* =========================================================
+   RESUME SUMMARY CARD
+========================================================= */
+
+.resume-summary-card {
+  position: relative;
+
+  padding: 30px;
+
+  overflow: hidden;
+}
+
+.resume-summary-card::before {
+  content: "";
+
+  position: absolute;
+  top: -110px;
+  right: -100px;
+
+  width: 270px;
+  height: 270px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(201, 188, 245, 0.2),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+.resume-summary-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.resume-summary-icon {
+  margin-bottom: 22px;
+}
+
+.resume-summary-card h2 {
+  margin-bottom: 8px;
+
+  font-size: 1.8rem;
+}
+
+.resume-summary-title {
+  margin-bottom: 22px;
+
+  color: var(--color-accent-light);
+
+  font-size: 0.94rem;
+  font-weight: 700;
+}
+
+.resume-summary-list {
+  display: grid;
+  gap: 14px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.resume-summary-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+
+  padding-bottom: 14px;
+
+  border-bottom: 1px solid rgba(190, 219, 239, 0.09);
+
+  color: var(--color-text-soft);
+
+  font-size: 0.9rem;
+}
+
+.resume-summary-list li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.resume-summary-list i {
+  width: 18px;
+  margin-top: 4px;
+
+  color: var(--color-accent);
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   QUICK HIGHLIGHTS
+========================================================= */
+
+.resume-highlights-section {
+  padding-top: 84px;
+}
+
+.resume-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.resume-highlight-card {
+  min-height: 100%;
+  padding: 25px;
+}
+
+.resume-highlight-card .card-icon {
+  margin-bottom: 20px;
+}
+
+.resume-highlight-card h3 {
+  margin-bottom: 12px;
+}
+
+.resume-highlight-card p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   PROFESSIONAL EXPERIENCE
+========================================================= */
+
+.experience-section {
+  padding-top: 90px;
+}
+
+.experience-card {
+  padding: clamp(28px, 4vw, 42px);
+}
+
+.experience-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+
+  border-bottom: 1px solid rgba(190, 219, 239, 0.1);
+}
+
+.experience-company-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 54px;
+  height: 54px;
+
+  flex-shrink: 0;
+
+  border: 1px solid rgba(169, 213, 239, 0.28);
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(169, 213, 239, 0.18),
+      rgba(201, 188, 245, 0.1)
+    );
+
+  color: var(--color-accent-light);
+
+  font-size: 1.2rem;
+}
+
+.experience-label {
+  margin-bottom: 5px;
+
+  color: var(--color-accent);
+
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.experience-header h3 {
+  margin-bottom: 4px;
+
+  font-size: 1.5rem;
+}
+
+.experience-role {
+  margin-bottom: 0;
+
+  color: var(--color-muted);
+
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.experience-content > p {
+  max-width: 840px;
+  margin-bottom: 22px;
+}
+
+.experience-list {
+  display: grid;
+  gap: 13px;
+
+  margin: 0 0 28px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.experience-list li {
+  position: relative;
+
+  padding-left: 24px;
+
+  color: var(--color-text-soft);
+}
+
+.experience-list li::before {
+  content: "✓";
+
+  position: absolute;
+  left: 0;
+
+  color: var(--color-pastel-green);
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   EDUCATION
+========================================================= */
+
+.education-section {
+  padding-top: 86px;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.education-card {
+  min-height: 100%;
+  padding: 28px;
+}
+
+.education-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  margin-bottom: 24px;
+}
+
+.education-card h3 {
+  margin-bottom: 10px;
+}
+
+.education-degree {
+  margin-bottom: 4px;
+
+  color: var(--color-accent-light);
+
+  font-weight: 700;
+}
+
+.education-focus {
+  margin-bottom: 18px;
+
+  color: var(--color-muted);
+
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.education-card p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   TECHNICAL SKILLS
+========================================================= */
+
+.skills-section {
+  padding-top: 88px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.skill-group {
+  min-height: 100%;
+  padding: 28px;
+}
+
+.skill-group-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-bottom: 24px;
+}
+
+.skill-group-header .card-icon {
+  flex-shrink: 0;
+}
+
+.skill-group-header h3 {
+  margin-bottom: 0;
+}
+
+.skill-group .skill-list {
+  align-content: flex-start;
+}
+
+
+/* =========================================================
+   CURRENT FOCUS
+========================================================= */
+
+.resume-focus-section {
+  padding-top: 82px;
+}
+
+.resume-focus-panel {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.resume-focus-panel::before {
+  content: "";
+
+  position: absolute;
+  right: -130px;
+  bottom: -160px;
+
+  width: 360px;
+  height: 360px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(147, 213, 190, 0.15),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+.resume-focus-content,
+.resume-focus-panel .focus-tags {
+  position: relative;
+  z-index: 1;
+}
+
+.resume-focus-panel .focus-tags {
+  justify-content: flex-end;
+  max-width: 470px;
+}
+
+
+/* =========================================================
+   RESUME PROJECTS
+========================================================= */
+
+.resume-projects-section {
+  padding-top: 88px;
+}
+
+.resume-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.resume-project-card {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100%;
+  padding: 28px;
+}
+
+.resume-project-card .project-icon {
+  margin-bottom: 22px;
+}
+
+.resume-project-card h3 {
+  margin-bottom: 14px;
+}
+
+.resume-project-card p {
+  margin-bottom: 24px;
+}
+
+.resume-project-card .text-link {
+  margin-top: auto;
+}
+
+
+/* =========================================================
+   RESUME DOWNLOAD PANEL
+========================================================= */
+
+.resume-download-section {
+  padding-top: 84px;
+}
+
+.resume-download-card {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 28px;
+
+  padding: clamp(28px, 5vw, 46px);
+
+  overflow: hidden;
+}
+
+.resume-download-card::before {
+  content: "";
+
+  position: absolute;
+  top: -130px;
+  right: -100px;
+
+  width: 310px;
+  height: 310px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(169, 213, 239, 0.16),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+.resume-download-icon,
+.resume-download-content,
+.resume-download-actions {
+  position: relative;
+  z-index: 1;
+}
+
+.resume-download-content h2 {
+  margin-bottom: 12px;
+}
+
+.resume-download-content p:last-child {
+  margin-bottom: 0;
+}
+
+.resume-download-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  min-width: max-content;
+}
+
+
+/* =========================================================
+   RESUME CTA
+========================================================= */
+
+.cta-section {
+  padding-top: 78px;
+  padding-bottom: 108px;
+}
+
+.cta-card {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.cta-card::before {
+  content: "";
+
+  position: absolute;
+  top: -150px;
+  right: -120px;
+
+  width: 350px;
+  height: 350px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(201, 188, 245, 0.16),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+.cta-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =========================================================
+   ENTRANCE ANIMATIONS
+========================================================= */
+
+.resume-hero-content,
+.resume-summary-card,
+.resume-highlights-section .section-heading,
+.resume-highlight-card,
+.experience-section .section-heading,
+.experience-card,
+.education-section .section-heading,
+.education-card,
+.skills-section .section-heading,
+.skill-group,
+.resume-focus-panel,
+.resume-projects-section .section-heading,
+.resume-project-card,
+.resume-download-card,
+.cta-card {
+  animation: resume-fade-up 720ms ease both;
+}
+
+.resume-summary-card {
+  animation-delay: 100ms;
+}
+
+.resume-highlight-card:nth-child(1) {
+  animation-delay: 70ms;
+}
+
+.resume-highlight-card:nth-child(2) {
+  animation-delay: 130ms;
+}
+
+.resume-highlight-card:nth-child(3) {
+  animation-delay: 190ms;
+}
+
+.resume-highlight-card:nth-child(4) {
+  animation-delay: 250ms;
+}
+
+.education-card:nth-child(1) {
+  animation-delay: 90ms;
+}
+
+.education-card:nth-child(2) {
+  animation-delay: 170ms;
+}
+
+.skill-group:nth-child(1) {
+  animation-delay: 80ms;
+}
+
+.skill-group:nth-child(2) {
+  animation-delay: 140ms;
+}
+
+.skill-group:nth-child(3) {
+  animation-delay: 200ms;
+}
+
+.skill-group:nth-child(4) {
+  animation-delay: 260ms;
+}
+
+.resume-project-card:nth-child(1) {
+  animation-delay: 90ms;
+}
+
+.resume-project-card:nth-child(2) {
+  animation-delay: 170ms;
+}
+
+.resume-project-card:nth-child(3) {
+  animation-delay: 250ms;
+}
+
+@keyframes resume-fade-up {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   MEDIUM SCREENS
+========================================================= */
+
+@media (max-width: 1050px) {
+  .resume-hero-layout {
+    grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
+    gap: 48px;
+  }
+
+  .resume-highlights-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .resume-projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .resume-project-card:last-child {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 12px);
+    justify-self: center;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+  .resume-hero {
+    padding-top: 66px;
+  }
+
+  .resume-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .resume-hero-content,
+  .resume-hero-content h1,
+  .resume-hero-intro,
+  .resume-hero-content > p {
+    max-width: none;
+  }
+
+  .resume-summary-card {
+    max-width: 560px;
+  }
+
+  .education-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-focus-panel .focus-tags {
+    justify-content: flex-start;
+    max-width: none;
+  }
+
+  .resume-download-card {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .resume-download-actions {
+    grid-column: 1 / -1;
+    min-width: 0;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+  .resume-hero {
+    padding-top: 54px;
+    padding-bottom: 64px;
+  }
+
+  .resume-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .resume-highlights-grid,
+  .resume-projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-project-card:last-child {
+    grid-column: auto;
+    max-width: none;
+  }
+
+  .resume-summary-card,
+  .resume-highlight-card,
+  .education-card,
+  .skill-group,
+  .resume-project-card {
+    padding: 22px;
+  }
+
+  .experience-card {
+    padding: 24px;
+  }
+
+  .experience-header {
+    flex-direction: column;
+  }
+
+  .education-card-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .resume-download-card {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+
+  .resume-download-actions {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .resume-download-actions .button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+  .resume-hero-intro {
+    font-size: 1.04rem;
+  }
+
+  .experience-list li {
+    font-size: 0.92rem;
+  }
+
+  .skill-group-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .resume-hero-content,
+  .resume-summary-card,
+  .resume-highlights-section .section-heading,
+  .resume-highlight-card,
+  .experience-section .section-heading,
+  .experience-card,
+  .education-section .section-heading,
+  .education-card,
+  .skills-section .section-heading,
+  .skill-group,
+  .resume-focus-panel,
+  .resume-projects-section .section-heading,
+  .resume-project-card,
+  .resume-download-card,
+  .cta-card {
+    animation: none;
+  }
+}

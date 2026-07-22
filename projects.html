@@ -1,132 +1,964 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Iris Daniels</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Projects | IRIS BUILDS</title>
+
+  <meta
+    name="description"
+    content="Explore completed and in-progress projects by Iris Daniels in infrastructure, automation, programming, systems, and application development."
+  >
+
+  <meta property="og:title" content="Projects | IRIS BUILDS">
+
+  <meta
+    property="og:description"
+    content="View the software, automation, infrastructure, and technical projects of Iris Daniels."
+  >
+
+  <meta
+    property="og:image"
+    content="images/imd_headshot.jpeg"
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Shared styles -->
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="apple-touch-icon" href="./assets/favicon.svg">
+  <link rel="stylesheet" href="./css/global.css">
+
+  <!-- Projects-page-specific styles -->
+  <link rel="stylesheet" href="./css/projects.css">
+
+  <script
+    src="https://kit.fontawesome.com/6bd3020cb3.js"
+    crossorigin="anonymous"
+  ></script>
 </head>
-<body>
 
-<div class="main-container">
+<body class="projects-page">
 
-    <h1>Projects & Portfolio</h1>
+  <!-- Decorative background elements -->
+  <div class="background-decoration" aria-hidden="true">
+    <span class="background-orb orb-one"></span>
+    <span class="background-orb orb-two"></span>
+    <span class="background-orb orb-three"></span>
+  </div>
 
-   <div class="item">
-        <h2>Coin Toss Simulator (C++)</h2>
+  <!-- =========================
+       SITE NAVIGATION
+  ========================== -->
 
-        <p>
-        <strong>Status:</strong> Complete
-    </p>
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Primary navigation">
 
-        <p>
-            An object-oriented C++ application that simulates repeated coin tosses,
-            tracks outcomes, and reports statistical results. Built to demonstrate
-            classes, constructors, loops, random number generation, and input validation.
-        </p>
+      <a
+        class="site-brand"
+        href="./index.html"
+        aria-label="IRIS BUILDS homepage"
+      >
+        <span class="brand-mark" aria-hidden="true">
+          <img
+            src="./assets/ib-logo.svg"
+            alt=""
+            class="brand-logo"
+            width="46"
+            height="46"
+          >
+        </span>
 
-        <p>
-            <strong>Technologies:</strong>
-            C++, Object-Oriented Programming, Input Validation
-        </p>
+        <span class="brand-text">
+          <strong>IRIS BUILDS</strong>
+          <small>Portfolio</small>
+        </span>
+      </a>
 
-        <p>
-            <a href="https://github.com/Iris-daniels25/Coin-Toss" target="_blank">
-                View Repository →
-            </a>
-        </p>
-    </div>
+      <button
+        class="mobile-menu-button"
+        id="mobile-menu-button"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="primary-menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <div class="item">
-    <h2>Task Manager CLI (Ruby)</h2>
+      <div class="nav-menu" id="primary-menu">
 
-    <p>
-        <strong>Status:</strong> Complete
-    </p>
-
-    <p>
-        A command-line task management application built in Ruby that allows
-        users to create, organize, and view tasks through an interactive terminal interface.
-        Designed using object-oriented programming principles and modular application structure.
-    </p>
-
-    <p>
-        <strong>Technologies:</strong>
-        Ruby, Command Line Interface (CLI), Object-Oriented Programming
-    </p>
-
-
-
-    <p>
-        <a href="https://github.com/Iris-daniels25/Command_Line_Interface" target="_blank">
-            View Repository →
+        <a class="nav-link" href="./index.html">
+          Home
         </a>
-    </p>
-</div>
 
-    <div class="item">
-        <h2>Infrastructure Automation with Ansible</h2>
+        <a class="nav-link" href="./about.html">
+          About
+        </a>
+
+        <a
+          class="nav-link active"
+          href="./projects.html"
+          aria-current="page"
+        >
+          Projects
+        </a>
+
+        <a class="nav-link" href="./resume.html">
+          Resume
+        </a>
+
+        <a class="nav-link" href="./contact.html">
+          Contact
+        </a>
+
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- =========================
+       MAIN CONTENT
+  ========================== -->
+
+  <main>
+
+    <!-- =========================
+         PROJECTS HERO
+    ========================== -->
+
+    <section class="projects-hero section">
+      <div class="container projects-hero-layout">
+
+        <div class="projects-hero-content">
+
+          <p class="eyebrow">
+            Projects
+          </p>
+
+          <h1>
+            Building practical solutions through
+            <span class="gradient-text">code and infrastructure.</span>
+          </h1>
+
+          <p class="projects-hero-intro">
+            My portfolio includes hands-on work in programming, Linux,
+            infrastructure automation, application development, systems
+            thinking, and technical project coordination.
+          </p>
+
+          <p>
+            I use projects to strengthen my skills, document what I learn, and
+            demonstrate how I approach technical problems from planning through
+            implementation.
+          </p>
+
+          <div class="projects-hero-actions">
+
+            <a
+              class="button primary-button"
+              href="#currently-building"
+            >
+              <i class="fa-solid fa-hammer" aria-hidden="true"></i>
+              See What I’m Building
+            </a>
+
+            <a
+              class="button secondary-button"
+              href="#completed-projects"
+            >
+              <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+              View Completed Projects
+            </a>
+
+          </div>
+
+        </div>
+
+        <aside class="projects-summary-card glass-card">
+
+          <div class="projects-summary-icon" aria-hidden="true">
+            <i class="fa-solid fa-code"></i>
+          </div>
+
+          <h2>Portfolio Focus</h2>
+
+          <p>
+            Projects across:
+          </p>
+
+          <ul class="projects-summary-list">
+
+            <li>
+              <i class="fa-solid fa-server" aria-hidden="true"></i>
+              Infrastructure and systems
+            </li>
+
+            <li>
+              <i class="fa-solid fa-gears" aria-hidden="true"></i>
+              Automation
+            </li>
+
+            <li>
+              <i class="fa-solid fa-terminal" aria-hidden="true"></i>
+              Programming
+            </li>
+
+            <li>
+              <i class="fa-solid fa-brain" aria-hidden="true"></i>
+              AI-focused applications
+            </li>
+
+          </ul>
+
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- =========================
+         CURRENTLY BUILDING
+    ========================== -->
+
+    <section
+      class="currently-building-section section"
+      id="currently-building"
+    >
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            Currently Building
+          </p>
+
+          <h2>Active projects in progress</h2>
+
+          <p>
+            These projects are still evolving. The progress bars represent
+            their current stage and will be updated as development continues.
+          </p>
+
+        </div>
+
+        <div class="currently-building-grid">
+
+          <!-- AI Face Scanner -->
+          <article class="building-card glass-card hover-lift">
+
+            <div class="building-card-header">
+
+              <div class="building-icon" aria-hidden="true">
+                <i class="fa-solid fa-face-viewfinder"></i>
+              </div>
+
+              <span class="building-stage">
+                UI Planning
+              </span>
+
+            </div>
+
+            <h3>AI Face Scanner</h3>
+
+            <p>
+              A skincare-focused application with live camera scanning, image
+              upload support, analysis results, seasonal recommendations, and a
+              polished interactive interface.
+            </p>
+
+            <ul class="technology-list" aria-label="Technologies planned">
+              <li>React</li>
+              <li>FastAPI</li>
+              <li>Python</li>
+              <li>Computer Vision</li>
+            </ul>
+
+            <div class="project-progress">
+
+              <div class="progress-heading">
+                <span>Progress</span>
+                <strong>20%</strong>
+              </div>
+
+              <div
+                class="progress-track"
+                role="progressbar"
+                aria-label="AI Face Scanner progress"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="20"
+              >
+                <span
+                  class="progress-fill"
+                  data-progress="20"
+                  style="--progress-width: 20%;"
+                ></span>
+              </div>
+
+            </div>
+
+            <p class="building-next-step">
+              <strong>Next:</strong>
+              Rebuild the landing page and scanner interface.
+            </p>
+
+          </article>
+
+          <!-- Cloud Active Directory Lab -->
+          <article class="building-card glass-card hover-lift">
+
+            <div class="building-card-header">
+
+              <div class="building-icon" aria-hidden="true">
+                <i class="fa-solid fa-cloud"></i>
+              </div>
+
+              <span class="building-stage">
+                Planning
+              </span>
+
+            </div>
+
+            <h3>Cloud Active Directory Lab</h3>
+
+            <p>
+              A portfolio lab focused on users, groups, permissions, policies,
+              identity administration, and cloud-based directory services.
+            </p>
+
+            <ul class="technology-list" aria-label="Technologies planned">
+              <li>Active Directory</li>
+              <li>Azure</li>
+              <li>Windows Server</li>
+              <li>Identity Management</li>
+            </ul>
+
+            <div class="project-progress">
+
+              <div class="progress-heading">
+                <span>Progress</span>
+                <strong>5%</strong>
+              </div>
+
+              <div
+                class="progress-track"
+                role="progressbar"
+                aria-label="Cloud Active Directory Lab progress"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="5"
+              >
+                <span
+                  class="progress-fill"
+                  data-progress="5"
+                  style="--progress-width: 5%;"
+                ></span>
+              </div>
+
+            </div>
+
+            <p class="building-next-step">
+              <strong>Next:</strong>
+              Finalize the lab architecture, cost, and environment.
+            </p>
+
+          </article>
+
+          <!-- Food Wheel App -->
+          <article class="building-card glass-card hover-lift">
+
+            <div class="building-card-header">
+
+              <div class="building-icon" aria-hidden="true">
+                <i class="fa-solid fa-utensils"></i>
+              </div>
+
+              <span class="building-stage">
+                Concept
+              </span>
+
+            </div>
+
+            <h3>Food Wheel App</h3>
+
+            <p>
+              An interactive spinning wheel that helps users choose a cuisine or
+              food category, such as Italian, seafood, burgers, or dessert.
+            </p>
+
+            <ul class="technology-list" aria-label="Technologies planned">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>UI Animation</li>
+            </ul>
+
+            <div class="project-progress">
+
+              <div class="progress-heading">
+                <span>Progress</span>
+                <strong>5%</strong>
+              </div>
+
+              <div
+                class="progress-track"
+                role="progressbar"
+                aria-label="Food Wheel App progress"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="5"
+              >
+                <span
+                  class="progress-fill"
+                  data-progress="5"
+                  style="--progress-width: 5%;"
+                ></span>
+              </div>
+
+            </div>
+
+            <p class="building-next-step">
+              <strong>Next:</strong>
+              Design the wheel, categories, and spin interaction.
+            </p>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         COMPLETED PROJECTS
+    ========================== -->
+
+    <section
+      class="completed-projects-section section"
+      id="completed-projects"
+    >
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            Completed Projects
+          </p>
+
+          <h2>Finished work and technical demonstrations</h2>
+
+          <p>
+            These projects demonstrate programming fundamentals, automation,
+            documentation, infrastructure concepts, and technical
+            problem-solving.
+          </p>
+
+        </div>
+
+        <div class="completed-projects-grid">
+
+          <!-- Ansible Linux Web Server -->
+          <article class="project-card glass-card hover-lift">
+
+            <div class="project-card-top">
+
+              <span class="project-category">
+                Infrastructure Automation
+              </span>
+
+              <span class="project-status complete-status">
+                Complete
+              </span>
+
+            </div>
+
+            <div class="project-icon" aria-hidden="true">
+              <i class="fa-solid fa-server"></i>
+            </div>
+
+            <h3>Ansible Linux Web Server</h3>
+
+            <p>
+              Automated an Ubuntu server configuration, installed Nginx,
+              deployed a custom webpage, and demonstrated idempotent
+              configuration management.
+            </p>
+
+            <ul class="technology-list" aria-label="Technologies used">
+              <li>Ansible</li>
+              <li>Linux</li>
+              <li>YAML</li>
+              <li>Nginx</li>
+              <li>GitHub Codespaces</li>
+            </ul>
+
+            <div class="project-proof">
+
+              <div>
+                <strong>Key proof</strong>
+                <span>Playbook completed with no additional changes.</span>
+              </div>
+
+              <div>
+                <strong>Outcome</strong>
+                <span>Live Nginx webpage served successfully.</span>
+              </div>
+
+            </div>
+
+            <div class="project-card-actions">
+
+              <a
+                class="button secondary-button"
+                href="https://github.com/Iris-daniels25/ansible-linux-webserver"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                GitHub
+              </a>
+
+            </div>
+
+          </article>
+
+          <!-- C++ Coin Toss -->
+          <article class="project-card glass-card hover-lift">
+
+            <div class="project-card-top">
+
+              <span class="project-category">
+                Programming
+              </span>
+
+              <span class="project-status complete-status">
+                Complete
+              </span>
+
+            </div>
+
+            <div class="project-icon" aria-hidden="true">
+              <i class="fa-solid fa-coins"></i>
+            </div>
+
+            <h3>C++ Coin Toss Simulator</h3>
+
+            <p>
+              An object-oriented command-line program that simulates repeated
+              coin tosses, validates user input, tracks outcomes, and displays
+              results.
+            </p>
+
+            <ul class="technology-list" aria-label="Technologies used">
+              <li>C++</li>
+              <li>OOP</li>
+              <li>CLI</li>
+              <li>Randomization</li>
+              <li>Input Validation</li>
+            </ul>
+
+            <div class="project-proof">
+
+              <div>
+                <strong>Key concept</strong>
+                <span>Classes, constructors, loops, and conditional logic.</span>
+              </div>
+
+              <div>
+                <strong>Outcome</strong>
+                <span>Interactive terminal simulation with tracked results.</span>
+              </div>
+
+            </div>
+
+            <div class="project-card-actions">
+
+              <a
+                class="button secondary-button"
+                href="https://github.com/Iris-daniels25/Coin-Toss"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                GitHub
+              </a>
+
+            </div>
+
+          </article>
+
+          <!-- Ruby Task Manager -->
+          <article class="project-card glass-card hover-lift">
+
+            <div class="project-card-top">
+
+              <span class="project-category">
+                Software Development
+              </span>
+
+              <span class="project-status complete-status">
+                Complete
+              </span>
+
+            </div>
+
+            <div class="project-icon" aria-hidden="true">
+              <i class="fa-solid fa-list-check"></i>
+            </div>
+
+            <h3>Ruby CLI Task Manager</h3>
+
+            <p>
+              A modular task-management application that allows users to add,
+              organize, and review tasks from an interactive command-line
+              interface.
+            </p>
+
+            <ul class="technology-list" aria-label="Technologies used">
+              <li>Ruby</li>
+              <li>OOP</li>
+              <li>CLI</li>
+              <li>Modular Design</li>
+            </ul>
+
+            <div class="project-proof">
+
+              <div>
+                <strong>Key concept</strong>
+                <span>Object-oriented structure and reusable application logic.</span>
+              </div>
+
+              <div>
+                <strong>Outcome</strong>
+                <span>Working terminal-based task management workflow.</span>
+              </div>
+
+            </div>
+
+            <div class="project-card-actions">
+
+              <a
+                class="button secondary-button"
+                href="https://github.com/Iris-daniels25/Command_Line_Interface"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                GitHub
+              </a>
+
+            </div>
+
+          </article>
+
+          <!-- Windows 11 Migration -->
+          <article class="project-card glass-card hover-lift professional-project-card">
+
+            <div class="project-card-top">
+
+              <span class="project-category">
+                Professional Experience
+              </span>
+
+              <span class="project-status professional-status">
+                IT Initiative
+              </span>
+
+            </div>
+
+            <div class="project-icon" aria-hidden="true">
+              <i class="fa-brands fa-windows"></i>
+            </div>
+
+            <h3>Windows 11 Migration Initiative</h3>
+
+            <p>
+              Supported planning and coordination for a Windows 10-to-Windows 11
+              migration involving approximately 300 devices.
+            </p>
+
+            <ul class="technology-list" aria-label="Skills used">
+              <li>Jira</li>
+              <li>Documentation</li>
+              <li>Windows 11</li>
+              <li>Stakeholder Communication</li>
+              <li>Project Coordination</li>
+            </ul>
+
+            <div class="project-proof">
+
+              <div>
+                <strong>Contribution</strong>
+                <span>Tracking, documentation, planning, and coordination.</span>
+              </div>
+
+              <div>
+                <strong>Environment</strong>
+                <span>University IT operations and device lifecycle work.</span>
+              </div>
+
+            </div>
+
+            <div class="project-card-actions">
+
+              <a
+                class="button secondary-button"
+                href="./resume.html"
+              >
+                View Experience
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         HOW I BUILD
+    ========================== -->
+
+    <section class="process-section section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            My Process
+          </p>
+
+          <h2>How I approach technical projects</h2>
+
+          <p>
+            I use a repeatable process to move from an idea to a working,
+            documented result.
+          </p>
+
+        </div>
+
+        <div class="process-grid">
+
+          <article class="process-card glass-card">
+
+            <span class="process-number">
+              01
+            </span>
+
+            <h3>Plan</h3>
+
+            <p>
+              Define the problem, goals, tools, requirements, and expected
+              outcome.
+            </p>
+
+          </article>
+
+          <article class="process-card glass-card">
+
+            <span class="process-number">
+              02
+            </span>
+
+            <h3>Build</h3>
+
+            <p>
+              Create the project in manageable stages and test each part as it
+              develops.
+            </p>
+
+          </article>
+
+          <article class="process-card glass-card">
+
+            <span class="process-number">
+              03
+            </span>
+
+            <h3>Verify</h3>
+
+            <p>
+              Confirm that the project works and collect evidence such as
+              screenshots, terminal output, or test results.
+            </p>
+
+          </article>
+
+          <article class="process-card glass-card">
+
+            <span class="process-number">
+              04
+            </span>
+
+            <h3>Document</h3>
+
+            <p>
+              Explain the purpose, setup, technologies, challenges, results, and
+              future improvements.
+            </p>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         PROJECT CTA
+    ========================== -->
+
+    <section class="cta-section section">
+      <div class="container">
+
+        <div class="cta-card glass-card">
+
+          <div>
+
+            <p class="eyebrow">
+              Let’s Connect
+            </p>
+
+            <h2>Interested in one of my projects?</h2>
+
+            <p>
+              I’m open to feedback, collaboration, technical opportunities, and
+              conversations about infrastructure, automation, and software.
+            </p>
+
+          </div>
+
+          <div class="cta-actions">
+
+            <a class="button primary-button" href="./contact.html">
+              Contact Me
+            </a>
+
+            <a
+              class="button secondary-button"
+              href="https://github.com/Iris-daniels25"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View GitHub
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================
+       SITE FOOTER
+  ========================== -->
+
+  <footer class="site-footer">
+    <div class="container footer-layout">
+
+      <div class="footer-brand">
+
+        <a
+          class="site-brand"
+          href="./index.html"
+          aria-label="IRIS BUILDS homepage"
+        >
+          <span class="brand-mark" aria-hidden="true">
+            <img
+              src="./assets/ib-logo.svg"
+              alt=""
+              class="brand-logo"
+              width="46"
+              height="46"
+            >
+          </span>
+
+          <span class="brand-text">
+            <strong>IRIS BUILDS</strong>
+          </span>
+        </a>
 
         <p>
-            <strong>Status:</strong> In Progress
+          Building software, automation, and infrastructure solutions.
+        </p>
+
+      </div>
+
+      <div class="footer-message">
+
+        <p>
+          Thanks for visiting.
+        </p>
+
+        <strong>
+          Let’s build something together.
+        </strong>
+
+        <div class="footer-social-links">
+
+          <a
+            href="https://github.com/Iris-daniels25"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            GitHub
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/iris-daniels-m/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            LinkedIn
+          </a>
+
+          <a href="./contact.html">
+            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+            Email
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="footer-copyright">
+
+        <p>
+          &copy; 2026 Iris Daniels.
         </p>
 
         <p>
-            Building a hands-on Ansible lab to learn configuration management,
-            Linux administration, and infrastructure automation concepts.
-            Inspired by exposure to High Performance Computing infrastructure
-            during my internship with the University of Chicago's Social Sciences
-            Computing Services department.
+          All rights reserved.
         </p>
 
-        <p>
-            <strong>Technologies:</strong>
-            Ansible, Linux, YAML, Bash, GitHub
-        </p>
+      </div>
+
     </div>
+  </footer>
 
-    <div class="item">
-        <h2>AI Face Scanner</h2>
-
-        <p>
-            <strong>Status:</strong> In Development
-        </p>
-
-        <p>
-            Machine learning project using computer vision models to classify
-            skin conditions from uploaded images. Focused on image classification,
-            API integration, and user interface development.
-        </p>
-
-        <p>
-            <strong>Technologies:</strong>
-            Python, React, FastAPI, Computer Vision, Machine Learning
-        </p>
-    </div>
-
-    <div class="item">
-        <h2>Windows 11 Migration Initiative</h2>
-
-        <p>
-            <strong>Status:</strong> Professional Experience
-        </p>
-
-        <p>
-            Supported coordination efforts for a Windows 10 to Windows 11 migration
-            initiative impacting approximately 300 devices within the University of
-            Chicago's Social Sciences Division.
-        </p>
-
-        <p>
-            <strong>Skills:</strong>
-            Project Coordination, Documentation, Jira, Stakeholder Communication,
-            IT Operations
-        </p>
-    </div>
-
-    <a href="index.html">← Back Home</a>
-
-</div>
-
+  <script src="./js/script.js"></script>
 </body>
+
 </html>
