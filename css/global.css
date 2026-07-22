@@ -1729,3 +1729,75 @@ body.page-entered main {
     transition: none;
   }
 }
+/* =========================================================
+   MOBILE TEXT CONTRAST
+========================================================= */
+
+@media (max-width: 650px) {
+  body {
+    color: #f4f7fb;
+  }
+
+  p,
+  li,
+  .card p,
+  .glass-card p {
+    color: #d8e0ea;
+  }
+
+  .section-heading p,
+  .hero-description,
+  .hero-content > p,
+  .projects-hero-content > p,
+  .resume-hero-content > p,
+  .about-hero-content > p,
+  .contact-hero-content > p {
+    color: #dce5ef;
+  }
+
+  .text-muted,
+  .project-card p,
+  .building-card p,
+  .process-card p,
+  .education-card p,
+  .experience-card p,
+  .skill-group p,
+  .contact-card p,
+  .resume-highlight-card p {
+    color: #cbd6e2;
+  }
+
+  .nav-link {
+    color: #e8eef5;
+  }
+
+  .nav-link.active,
+  .nav-link[aria-current="page"] {
+    color: #ffffff;
+  }
+
+  .technology-list span,
+  .skill-list span,
+  .status-badge,
+  .building-stage {
+    color: #e4edf6;
+  }
+
+  .footer-brand p,
+  .footer-message p,
+  .footer-copyright p {
+    color: #cbd6e2;
+  }
+
+  input,
+  textarea,
+  select {
+    color: #ffffff;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #aebdcb;
+    opacity: 1;
+  }
+}
