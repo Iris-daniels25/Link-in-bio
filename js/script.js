@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("page-entering");
   }
 
+  setupPortfolioCuration();
   setupMobileNavigation();
   setupShrinkingNavigation();
   setupProgressBars();
@@ -24,6 +25,34 @@ document.addEventListener("DOMContentLoaded", () => {
   setupPageEntry();
   setupLegacyContactToggle();
 });
+
+
+/* =========================================================
+   PORTFOLIO CURATION
+========================================================= */
+
+function setupPortfolioCuration() {
+  document.querySelectorAll(".building-card").forEach((card) => {
+    const title = card.querySelector("h3");
+
+    if (title?.textContent.trim() === "Food Wheel App") {
+      card.remove();
+    }
+  });
+
+  document.querySelectorAll(".highlight-card").forEach((card) => {
+    const title = card.querySelector("h3");
+    const description = card.querySelector("p");
+
+    if (
+      title?.textContent.trim() === "Currently Building" &&
+      description
+    ) {
+      description.textContent =
+        "Follow the progress of SkinSense AI and my cloud lab.";
+    }
+  });
+}
 
 
 /* =========================================================
